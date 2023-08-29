@@ -1,4 +1,4 @@
-// All app API's
+// Package api All app API's
 package api
 
 import (
@@ -9,12 +9,12 @@ import (
 
 // Server serves HTTP request for out banking service
 type Server struct {
-	store  *db.Store
+	store  db.Store
 	router *gin.Engine
 }
 
 // NewServer creates a new HTTP server and setup routing.
-func NewServer(store *db.Store) *Server {
+func NewServer(store db.Store) *Server {
 	server := &Server{store: store}
 	router := gin.Default()
 
