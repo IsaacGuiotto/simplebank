@@ -15,6 +15,8 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func TestGetAccountAPI(t *testing.T) {

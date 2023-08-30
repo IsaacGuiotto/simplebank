@@ -7,6 +7,7 @@ import (
 	db "simplebank/db/sqlc"
 	"simplebank/util"
 
+	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
 )
 
