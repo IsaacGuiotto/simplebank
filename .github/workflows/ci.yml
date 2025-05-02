@@ -55,15 +55,3 @@ jobs:
 
       - name: Test
         run: go test -v -cover ./...
-
-  Discord:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run Discord Webhook
-        uses: Sniddl/discord-commits@v1.6
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          template: template
-          message: "🚀 A new commit was pushed by ${{ github.actor }} to ${{ github.repository }} on ${{ github.ref_name }}."
-          include-extras: true
