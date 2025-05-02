@@ -64,5 +64,6 @@ jobs:
         uses: Sniddl/discord-commits@v1.6
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          template: "avatar-with-link"
+          template: template
+          message: "🚀 A new commit was pushed by ${{ github.actor }} to ${{ github.repository }} on ${{ github.ref_name }}."
           include-extras: true
